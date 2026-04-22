@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+    <!-- Allow HTTP fallback only for these specific domains -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">lekmanga.net</domain>
+        <domain includeSubdomains="true">mangalek.com</domain>
+        <domain includeSubdomains="true">mangaarab.com</domain>
+    </domain-config>
+</network-security-config>
