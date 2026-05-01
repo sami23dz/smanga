@@ -1,0 +1,15 @@
+include ':app'
+
+def flutterRoot = rootProject.projectDir.parentFile.absolutePath
+
+def flutterEnginePluginList = [
+    ]:app
+]
+
+flutterEnginePluginList.each { plugin ->
+    File pluginDirectory = new File(flutterRoot, '.pub-cache/hosted/pub.dartlang.org/' + plugin)
+    if (pluginDirectory.exists()) {
+        include ":$plugin"
+        project("$plugin").projectDir = pluginDirectory
+    }
+}
