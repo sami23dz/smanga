@@ -1,0 +1,5 @@
+// settings.gradle file for Flutter plugin configuration
+
+include ':app'
+
+// Add any required Flutter plugins here
